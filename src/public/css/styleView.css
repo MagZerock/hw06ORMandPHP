@@ -36,6 +36,8 @@
   width: 100%;
   margin-top: 2rem;
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 390px;
   position: relative;
   z-index: 1;
 }
@@ -55,6 +57,11 @@
   letter-spacing: 0.15em;
   font-weight: 700;
   border-bottom: 1px solid var(--field-border);
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.98);
+  backdrop-filter: blur(8px);
+  z-index: 2;
 }
 
 .customer-table td {
@@ -84,6 +91,30 @@
   color: var(--text-main);
   transform: translateY(-1px);
   transition: all 0.2s ease;
+}
+
+.table-responsive::-webkit-scrollbar,
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb,
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(197, 121, 56, 0.55);
+  border-radius: 999px;
+  border: 2px solid rgba(15, 15, 15, 0.98);
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover,
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 121, 56, 0.85);
 }
 
 .actions-cell,
