@@ -15,11 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'cellphone'  => $_POST['cellphone']
         ]);
         
-        // Redirección a la vista de éxito que tienes en tu carpeta view
         header("Location: ../view/saved.html"); 
         exit();
 
     } catch (\Exception $e) {
-        die("Error al guardar: " . $e->getMessage());
+        die("Error when saving: " . $e->getMessage());
     }
 }

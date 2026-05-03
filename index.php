@@ -1,3 +1,3 @@
 <?php
-header('Location: /src/view/index.html');
+header('Location: src/view/index.html');
 exit;
